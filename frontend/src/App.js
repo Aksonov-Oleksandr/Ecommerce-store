@@ -1,14 +1,22 @@
 
+import {BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
 function App() {
   return (
+    <BrowserRouter>
     <div>
-      <header>
-       <a href="/">Security Pro</a>
-      </header>
+        <header>
+            <Link to="/">Security Pro</Link>
+        </header>
       <main>
-        products list
-      </main>
+          <Routes>
+              <Route path="/" element={<HomeScreen/>}></Route>
+              <Route path="/product/:slug" element={<ProductScreen/>}></Route>
+          </Routes>
+          </main>
     </div>
+    </BrowserRouter>
   );
 }
 

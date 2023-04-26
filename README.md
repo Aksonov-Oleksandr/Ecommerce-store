@@ -1,6 +1,6 @@
-#MERN SHOP FOR DIPLOMA
+# MERN SHOP 
 
 
-#DESCRIPTION
-Full-stack mern application as a graduation project for bachelor's degree
+# DESCRIPTION
+Full-stack mern application built as a graduation project for bachelor's degree
 

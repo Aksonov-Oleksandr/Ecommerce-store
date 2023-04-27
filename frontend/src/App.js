@@ -2,7 +2,7 @@
 import {BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
-import {Container, Navbar} from "react-bootstrap";
+import {Container, Image, Navbar} from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap"
 function App() {
   return (

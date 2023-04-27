@@ -27,6 +27,17 @@ main {
   width: 100%;
   max-width: 400px;
 }
+.raiting span {
+  color: goldenrod;
+}
 .product-info {
   padding: 1rem;
+}
+.btn-primary{
+  background-color: seagreen;
+  color: honeydew;
+}
+.btn-primary:hover{
+  background-color: green;
+  color: honeydew;
 }

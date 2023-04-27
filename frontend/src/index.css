@@ -41,3 +41,11 @@ main {
   background-color: green;
   color: honeydew;
 }
+.img-large {
+  max-width: 100%;
+}
+.logonav {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%
+}

@@ -30,7 +30,7 @@ const data = {
             category: 'intercoms',
             image:'/imgs/domofon.jpg',
             price: 120,
-            countInStock: 13,
+            countInStock: 1,
             brand: 'cyfral',
             rating: 4.9,
             numReviews: 10,

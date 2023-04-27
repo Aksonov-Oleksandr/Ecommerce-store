@@ -1,6 +1,4 @@
-# MERN SHOP 
-
-
+# MERN SHOP
 # DESCRIPTION
-Full-stack mern application built as a graduation project for bachelor's degree
+Full-stack MERN application. Security systems e-shop built with React and Express.
 

@@ -2,7 +2,9 @@
 import {BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
-import {Container, Image, Navbar} from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
+import Navbar from "react-bootstrap/Navbar";
 import {LinkContainer} from "react-router-bootstrap"
 function App() {
   return (
@@ -12,14 +14,14 @@ function App() {
             <Navbar bg="dark" variant="dark">
             <Container>
                 <LinkContainer to="/"><Navbar.Brand>
-                    Security Pro
+                    <img src="imgs/2.png" alt="img" className="logonav"/>  Security Pro
                 </Navbar.Brand></LinkContainer>
             </Container>
             </Navbar>
 
         </header>
       <main>
-          <Container>
+          <Container className="mt-3">
               <Routes>
               <Route path="/" element={<HomeScreen/>}></Route>
               <Route path="/product/:slug" element={<ProductScreen/>}></Route>

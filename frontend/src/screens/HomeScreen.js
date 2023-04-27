@@ -4,6 +4,9 @@ import axios from "axios";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Product from "../components/Product";
+import {Helmet} from "react-helmet-async";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
 
 const  reducer  = (state, action) => {
     switch (action.type){
@@ -38,11 +41,16 @@ function HomeScreen() {
         fetchData();
     },[]);
     return <div>
+        <Helmet>
+            <title>Security Pro</title>
+        </Helmet>
         <h1>Featured products</h1>
         <div className="products">{
-            loading ? (<div>Loading</div>
+            loading ? (
+                <LoadingBox/>
                 ):
-                error ? (<div>Error</div>
+                error ? (
+                    <MessageBox variant="danger">{error}</MessageBox>
                     ):(
                         <Row>
                             {products.map((product) => (

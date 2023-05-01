@@ -12,6 +12,7 @@ import {useContext} from "react";
 import {Store} from "./Store";
 import { FaShoppingCart } from 'react-icons/fa';
 import CartScreen from "./screens/CartScreen";
+import SigninScreen from "./screens/SigninScreen";
 
 function App() {
     const {state} = useContext(Store);
@@ -45,9 +46,10 @@ function App() {
       <main>
           <Container className="mt-3">
               <Routes>
-              <Route path="/" element={<HomeScreen/>}></Route>
-              <Route path="/product/:slug" element={<ProductScreen/>}></Route>
+               <Route path="/" element={<HomeScreen/>}></Route>
+               <Route path="/product/:slug" element={<ProductScreen/>}></Route>
                <Route path="/cart" element={<CartScreen/>}></Route>
+               <Route path="/signin" element={<SigninScreen/>} />
               </Routes>
           </Container>
 

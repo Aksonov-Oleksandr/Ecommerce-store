@@ -1,6 +1,7 @@
 const data = {
     products: [
         {
+            _id: '1',
             name: 'ajax fire alarm',
             slug: 'fire-security-systems',
             category: 'fire alarms',
@@ -13,6 +14,7 @@ const data = {
             description: "Fastest fire alarm to save your life"
         },
         {
+            _id: '2',
             name: 'quick car alarm',
             slug: 'car-alarms',
             category: 'car alarms',
@@ -25,6 +27,7 @@ const data = {
             description: "The best way to save your car"
         },
         {
+            _id: '3',
             name: 'intercom',
             slug: 'house-intercoms',
             category: 'intercoms',
@@ -37,6 +40,7 @@ const data = {
             description: "Protecting your house from uninvited guests"
         },
         {
+            _id: '4',
             name: 'Sasha no camera',
             slug: 'CCTV-Cameras',
             category: 'CCTV Cameras',

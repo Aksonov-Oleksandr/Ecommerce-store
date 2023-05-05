@@ -48,7 +48,7 @@ export default function CartScreen(){
                             Cart is empty. <Link to="/">Go Shopping</Link>
                         </MessageBox>
                     ) : (
-                        <ListGroup>
+                        <ListGroup className="list-group">
                             {cartItems.map((item) => (
                                 <ListGroup.Item key={item._id}>
                                     <Row className="align-items-center">
@@ -58,7 +58,7 @@ export default function CartScreen(){
                                                 alt={item.name}
                                                 className="img-fluid rounded img-thumbnail"
                                             ></img>{' '}
-                                            <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                                            <Link className="custom-link"  to={`/product/${item.slug}`}>{item.name}</Link>
                                         </Col>
                                         <Col md={3}>
                                             <Button variant="light"
@@ -92,15 +92,15 @@ export default function CartScreen(){
                 <Col md={4}>
                     <Card>
                         <Card.Body>
-                            <ListGroup variant="flush">
-                                <ListGroup.Item>
+                            <ListGroup className="proceed-list" >
+                                <ListGroup.Item className="subtotal">
                                     <h3>
                                         Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
                                         items) : $
                                         {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
                                     </h3>
                                 </ListGroup.Item>
-                                <ListGroup.Item>
+                                <ListGroup.Item className="proceed-btn" >
                                     <div className="d-grid">
                                         <Button
                                             type="button"

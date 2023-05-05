@@ -34,9 +34,15 @@ main {
   padding: 1rem;
 }
 .btn-primary{
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 10rem;
   background-color: seagreen ;
-  color: honeydew ;
+  color: honeydew;
   border: none;
+  transition: background-color 0.3s ease-in-out;
+
 }
 .btn-primary:hover{
   background-color: green;
@@ -55,4 +61,185 @@ main {
 }
 .small-container {
   max-width: 600px;
+}
+.checkout-steps > div {
+  border-bottom: 0.2rem solid darkolivegreen;
+  color: darkslategrey;
+}
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid darkcyan;
+  color: darkcyan;
+}
+
+
+
+.custom-radio .form-check-input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-radio .form-check-input[type="radio"]:not(:disabled) + .form-check-label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid #6c757d;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.custom-radio .form-check-input[type="radio"]:not(:disabled):checked + .form-check-label::before {
+  background-color: darkslategray;
+  border-color: black;
+}
+
+.custom-radio .form-check-input[type="radio"]:not(:disabled):active + .form-check-label::before {
+  background-color: darkslategray;
+  border-color: black;
+  box-shadow: none;
+}
+
+.custom-radio .form-check-input[type="radio"]:not(:disabled):focus + .form-check-label::before {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.custom-radio .form-check-input[type="radio"]:disabled + .form-check-label::before {
+  background-color: #f8f9fa;
+  border-color: #ddd;
+}
+
+.custom-radio .form-check-input[type="radio"]:disabled:checked + .form-check-label::before {
+  background-color: #ccc;
+  border-color: #ccc;
+}
+
+
+
+
+.card {
+  border: none;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 13rem;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: darkolivegreen;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.custom-link {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.custom-link {
+  color: black;
+  transition: all 0.1s ease-in-out;
+}
+
+.custom-link:hover {
+  color: dimgray;
+  border-bottom: 2px solid dimgray;
+}
+
+
+
+.list-group {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.list-group-item {
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: lightslategray;
+  cursor: pointer;
+}
+
+.list-group-item.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+.list-group-item.subtotal {
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.list-group-item.subtotal:hover {
+  background-color: white;
+  cursor: default;
+}
+
+.list-group-item.subtotal.active {
+  background-color: white;
+}
+
+
+.list-group-item.proceed-btn {
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.list-group-item.proceed-btn:hover {
+  background-color: white;
+  cursor: default;
+}
+
+.list-group-item.proceed-btn.active {
+  background-color: white;
+}
+
+.remove-unwanted {
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.remove-unwanted:hover {
+  background-color: white;
+  cursor: default;
+}
+
+.remove-unwanted.active {
+  background-color: white;
 }

@@ -78,31 +78,31 @@ function ProductScreen() {
                       <img className="img-large" src={product.image} alt={product.name}></img>
                   </Col>
                   <Col md={3}>
-                      <ListGroup variant="flush">
-                          <ListGroup.Item>
+                      <ListGroup variant="flush" >
+                          <ListGroup.Item className="remove-unwanted">
                               <Helmet>
                                   <title>{product.name}</title>
                               </Helmet>
                               <h1>{product.name }</h1>
                           </ListGroup.Item>
-                          <ListGroup.Item>
+                          <ListGroup.Item className="remove-unwanted">
                               <Rating rating={product.rating} numReviews={product.numReviews}></Rating>
                           </ListGroup.Item>
-                          <ListGroup.Item>Price : ₴{product.price}</ListGroup.Item>
-                          <ListGroup.Item><p>{product.description}</p></ListGroup.Item>
+                          <ListGroup.Item className="remove-unwanted">Price : ₴{product.price}</ListGroup.Item>
+                          <ListGroup.Item className="remove-unwanted"remove-unwanted><p>{product.description}</p></ListGroup.Item>
                       </ListGroup>
                   </Col>
                   <Col md={3}>
                       <Card>
                           <Card.Body>
-                              <ListGroup variant="flush">
-                                <ListGroup.Item>
+                              <ListGroup variant="flush" >
+                                <ListGroup.Item className="remove-unwanted">
                                     <Row>
                                         <Col>Price: </Col>
                                         <Col>₴{product.price}</Col>
                                     </Row>
                                 </ListGroup.Item>
-                                <ListGroup.Item>
+                                <ListGroup.Item className="remove-unwanted">
                                       <Row>
                                           <Col>Status: </Col>
                                           <Col>{product.countInStock>0?
@@ -113,7 +113,7 @@ function ProductScreen() {
                                       </Row>
                                 </ListGroup.Item>
                                   {product.countInStock>0 && (
-                                      <ListGroup.Item>
+                                      <ListGroup.Item className="remove-unwanted">
                                           <div className="d-grid">
                                               <Button onClick={addToCartHandler} variant="primary">
                                                   Add to cart

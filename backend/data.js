@@ -16,7 +16,7 @@ const data = {
     ],
     products: [
         {
-            name: 'ajax fire alarm',
+            name: 'fire alarm',
             slug: 'fire-security-systems',
             category: 'fire alarms',
             image:'/imgs/fire-alarm.jpg',

@@ -9,7 +9,7 @@ const userRouter = express.Router();
 
 userRouter.put(
     '/profile',
-    isAuth,
+        isAuth,
     expressAsyncHandler(async (req, res) => {
         const user = await User.findById(req.user._id);
         if (user) {

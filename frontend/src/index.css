@@ -38,14 +38,14 @@ main {
   margin: auto;
   width: 100%;
   max-width: 10rem;
-  background-color: seagreen ;
+  background-color: #284b63 ;
   color: honeydew;
   border: none;
   transition: background-color 0.3s ease-in-out;
 
 }
 .btn-primary:hover{
-  background-color: green;
+  background-color: #3c6e71;
   color: honeydew;
 }
 .img-large {
@@ -140,7 +140,7 @@ main {
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: bold;
-  color: darkolivegreen;
+  color: #353535;
   margin-bottom: 0.5rem;
   text-align: center;
   text-transform: uppercase;
@@ -243,3 +243,62 @@ main {
 .remove-unwanted.active {
   background-color: white;
 }
+
+/* sidebar */
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #343a40;
+  transition: 0.5s;
+}
+
+.site-container {
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
+}
+
+
+.sbar-link{
+  font-family: 'Optima', Arial, sans-serif;
+  textDecoration: none;
+  fontSize: 16px;
+  fontWeight: bold;
+  marginBottom: 10px;
+  padding: 5px;
+  color: #8e9aaf;
+  border: none;
+  box-shadow: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.sbar-link:hover,
+.sbar-link:focus {
+  /* Стили при наведении */
+  border-radius: 7px;
+  color: #cbc0d3;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px #d9d9d9;
+}
+
+.btn-outline-primary {
+  background-color: #4a4e69;
+  color: #22223b;
+  border-color: #9a8c98;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3c6e71;
+  color: #22223b;
+  border-color: #9a8c98;
+}
+

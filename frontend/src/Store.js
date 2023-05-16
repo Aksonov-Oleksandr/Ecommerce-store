@@ -2,9 +2,6 @@ import { createContext, useReducer } from 'react';
 export const Store = createContext();
 
 const initialState = {
-    shippingAddress: localStorage.getItem('shippingAddress')
-        ? JSON.parse(localStorage.getItem('shippingAddress'))
-        : {},
 
     paymentMethod: localStorage.getItem('paymentMethod')
         ? localStorage.getItem('paymentMethod')
@@ -15,6 +12,9 @@ const initialState = {
         : null,
 
     cart: {
+        shippingAddress: localStorage.getItem('shippingAddress')
+            ? JSON.parse(localStorage.getItem('shippingAddress'))
+            : {},
         cartItems: localStorage.getItem('cartItems')
             ? JSON.parse(localStorage.getItem('cartItems'))
             : [],

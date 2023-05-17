@@ -7,6 +7,7 @@ import Product from "../components/Product";
 import {Helmet} from "react-helmet-async";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+import {FaHandHoldingHeart} from "react-icons/fa";
 
 const  reducer  = (state, action) => {
     switch (action.type){
@@ -44,7 +45,7 @@ function HomeScreen() {
         <Helmet>
             <title>Security Pro</title>
         </Helmet>
-        <h1>Featured products</h1>
+        <h1>Featured products <FaHandHoldingHeart size={40}/></h1>
         <div className="products">{
             loading ? (
                 <LoadingBox/>

@@ -302,3 +302,6 @@ main {
   border-color: #9a8c98;
 }
 
+.text-bold {
+  font-weight: bold;
+}

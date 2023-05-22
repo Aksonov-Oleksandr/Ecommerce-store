@@ -117,14 +117,16 @@ export   function SearchScreen() {
         fetchCategories();
     }, [dispatch]);
 
-    const getFilterUrl = (filter) => {
+    const getFilterUrl = (filter, skipPathname) => {
         const filterPage = filter.page || page;
         const filterCategory = filter.category || category;
         const filterQuery = filter.query || query;
         const filterRating = filter.rating || rating;
         const filterPrice = filter.price || price;
         const sortOrder = filter.order || order;
-        return `/search/category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`;
+        return `${
+            skipPathname ? '' : '/search?'
+        }category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`;
     };
     return (
         <div>
@@ -138,6 +140,7 @@ export   function SearchScreen() {
                         <ul>
                             <li>
                                 <Link
+                                    style={{textDecoration:"none", color:"black"}}
                                     className={'all' === category ? 'text-bold' : ''}
                                     to={getFilterUrl({ category: 'all' })}
                                 >
@@ -148,6 +151,7 @@ export   function SearchScreen() {
                                 <li key={c}>
                                     <Link
                                         className={c === category ? 'text-bold' : ''}
+                                        style={{textDecoration:"none", color:"black"}}
                                         to={getFilterUrl({ category: c })}
                                     >
                                         {c}
@@ -161,6 +165,7 @@ export   function SearchScreen() {
                         <ul>
                             <li>
                                 <Link
+                                    style={{textDecoration:"none", color:"black"}}
                                     className={'all' === price ? 'text-bold' : ''}
                                     to={getFilterUrl({ price: 'all' })}
                                 >
@@ -170,6 +175,7 @@ export   function SearchScreen() {
                             {prices.map((p) => (
                                 <li key={p.value}>
                                     <Link
+                                        style={{textDecoration:"none", color:"green", fontWeight: "bold"}}
                                         to={getFilterUrl({ price: p.value })}
                                         className={p.value === price ? 'text-bold' : ''}
                                     >
@@ -263,7 +269,10 @@ export   function SearchScreen() {
                                     <LinkContainer
                                         key={x + 1}
                                         className="mx-1"
-                                        to={getFilterUrl({ page: x + 1 })}
+                                        to={{
+                                            pathname: '/search',
+                                            search: getFilterUrl({ page: x + 1 }, true),
+                                        }}
                                     >
                                         <Button
                                             className={Number(page) === x + 1 ? 'text-bold' : ''}

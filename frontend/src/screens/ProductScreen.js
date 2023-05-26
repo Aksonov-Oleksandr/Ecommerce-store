@@ -76,6 +76,7 @@ function ProductScreen() {
               <Row>
                   <Col md={6}>
                       <img className="img-large" src={product.image} alt={product.name}></img>
+
                   </Col>
                   <Col md={3}>
                       <ListGroup variant="flush" >
@@ -89,7 +90,9 @@ function ProductScreen() {
                               <Rating rating={product.rating} numReviews={product.numReviews}></Rating>
                           </ListGroup.Item>
                           <ListGroup.Item className="remove-unwanted">Price : ₴{product.price}</ListGroup.Item>
-                          <ListGroup.Item className="remove-unwanted"remove-unwanted><p>{product.description}</p></ListGroup.Item>
+                          <ListGroup.Item  className="remove-unwanted">
+                              <p className="product-description">{product.description}</p>
+                          </ListGroup.Item>
                       </ListGroup>
                   </Col>
                   <Col md={3}>
@@ -105,11 +108,13 @@ function ProductScreen() {
                                 <ListGroup.Item className="remove-unwanted">
                                       <Row>
                                           <Col>Status: </Col>
-                                          <Col>{product.countInStock>0?
-                                              <Badge bg="success">Available in stock</Badge>
-                                              :
-                                              <Badge bg="danger">Unavailable</Badge>
-                                          }</Col>
+                                          <Col>
+                                              {product.countInStock > 0 ? (
+                                                  <Badge bg="success">In Stock</Badge>
+                                              ) : (
+                                                  <Badge bg="danger">Unavailable</Badge>
+                                              )}
+                                          </Col>
                                       </Row>
                                 </ListGroup.Item>
                                   {product.countInStock>0 && (

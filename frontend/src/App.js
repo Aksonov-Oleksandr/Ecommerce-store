@@ -10,7 +10,7 @@ import Nav from "react-bootstrap/Nav";
 import Badge from "react-bootstrap/Badge";
 import { useContext, useEffect, useState } from 'react';
 import {Store} from "./Store";
-import {FaHistory, FaShoppingCart, FaSignInAlt, FaSignOutAlt, FaUserCircle} from 'react-icons/fa';
+import {FaHistory, FaShoppingCart, FaSignInAlt, FaSignOutAlt, FaUserCircle, FaGoogle} from 'react-icons/fa';
 import CartScreen from "./screens/CartScreen";
 import SigninScreen from "./screens/SigninScreen";
 import { toast, ToastContainer } from 'react-toastify';
@@ -113,7 +113,12 @@ function App() {
                                 <FaSignInAlt size={25}/>
                                 Sign In
                             </Link>
+
                         )}
+                        <Link to="/googelauth" className="nav-link">
+                            <FaGoogle size={25}/>
+                             Google
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
@@ -155,14 +160,8 @@ function App() {
                <Route path="/profile" element={<ProfileScreen />} />
                <Route path="/placeorder" element={<PlaceOrderScreen />} />
                <Route path="/order/:id" element={<OrderScreen />}></Route>
-                  <Route
-                      path="/orderhistory"
-                      element={<OrderHistoryScreen />}
-                  ></Route>
-               <Route
-                      path="/shipping"
-                      element={<ShippingAddressScreen />}
-               ></Route>
+               <Route path="/orderhistory" element={<OrderHistoryScreen />}></Route>
+               <Route path="/shipping" element={<ShippingAddressScreen />}></Route>
                <Route path="/payment" element={<PaymentMethodScreen />}></Route>
               </Routes>
           </Container>
